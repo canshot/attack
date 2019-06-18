@@ -16,14 +16,7 @@
     /* Create two equal columns that floats next to each other */
 
     .column1 {
-      float: left;
-      width: 50%;
-      padding: 5px;
-      padding-left: 30px;
-      height: auto; 
-    }
-    .column2 {
-      float: left;
+      margin: auto;
       width: 50%;
       padding: 5px;
       padding-left: 30px;
@@ -40,113 +33,35 @@
           max-width: 960px;
           margin: auto;
           padding-top: 0px;
-        }
+    }
     .button {
           background-color: #4CAF50; 
           color: rgb(255, 255, 255);
           margin-left :0px; 
-        }
-    iframe:focus { 
-  outline: none; 
-        }
-    iframe[seamless] { 
-  display: block;
     }
-  table {
-  border: 1px solid black;
-  border-collapse: collapse;
-  }
-  th {
-  border: 1px solid black;
-  border-collapse: collapse;
-  }
-  td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding-left: 15px;
-  }
-
-  tr:nth-child(even) {background-color: #f2f2f2;}
+    iframe:focus { 
+           outline: none; 
+    }
+    iframe[seamless] { 
+            display: block;
+    }
   
   </style>
   </head>
 
-  <body>
+    <body>
 
-    <div class="row">
+      <div class="row">
       <div class="column1" style="background-color:rgb(255, 255, 255);">
-        <h2>Email editor</h2>
-        <iframe style="border:none;" height=950px; width=850px; src="https://canshot.github.io/email"></iframe>
-        <br>
 
-    </div>
-      
-    <div class="column2" style="width:850px;
-                                height:auto;
-                                border:1px 
-                                solid #000;
-                                background-color:rgb(219, 219, 219);
-                                margin-top: 15px">
-        
-      <!--right column-->
-      <h2>Field & Details</h2>
-      <table style="width:100%">
-      <tr>
-      <th>Field</th>
-      <th>Detail</th> 
-      </tr>
-      
-      <tr>
-      <td>Your name</td>
-      <td>Enter your actual first and last name</td>
-      </tr>
-      
-      <tr>
-      <td>Email type</td>
-      <td>Enter ‘authentic’ or ‘phishing’ based on your assigned condition</td>
-      </tr>
-      
-      <tr>
-      <td>Desired email address</td>
-      <td>- Enter an email address<br> 
-          - You can craft any email address but are not allow to use UNCC account</td>
-      </tr>
-      <tr>
-      <td>Receiver’s email</td>
-      <td>Enter the receiver’s email address given by the researcher</td>
-      </tr>
-      <tr>
-      <td>Sent time</td>
-      <td>Enter the desired  time of day when you expect this email to be sent</td>
-      </tr>
-      <tr>
-      <td>Sent day</td>
-      <td>Enter the desired date when you expect this email to be sent</td>
-      </tr>
-      <tr>
-      <td>Email subject</td>
-      <td>Enter a subject line for this email (if any)</td>
-      </tr>
-      <tr>
-      <td>Email body</td>
-      <td>- Length of the body should be more than 50 words<br> 
-      - You can insert any image and link or add the attachment<br> 
-      - You can format the email text by setting font style, size, and color, etc<br>
-      - You can search for related information on the Internet
-      </td>
-      </tr>
-      <tr>
-        <td>Critical sentence</td>
-        <td>After crafting the email, copy & paste one sentence that is the key to its fakeness
-        </td>
-        </tr>
-            </table>
-<br>
+      <h2>Compose an email</h2>
+      <iframe style="border:none;" height=950px; width=850px; src="https://canshot.github.io/email"></iframe>
+      <br>
+
       </div>
-    </div>
-  </body>
+    </body>
     <form class = "content">
-        <button class="button" style="margin-left:820px;" type="submit" formaction="attack8.html">next</button>
+        <button class="button" style="margin-left:820px;" type="submit" formaction="attack9.html">next</button>
     </form>
 
 
