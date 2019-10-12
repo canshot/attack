@@ -53,12 +53,30 @@
           class="center" width="940" height="650" frameborder="0" 
           allow="autoplay; fullscreen" allowfullscreen></iframe> 
           <h3>
-            <p align="center">After watching the video, cilck 'next' button to move onto the text material.</p>
+            <p align="center">After watching the video, the next button will be appeared to move onto text material.</p>
           </h3>    
     <form>
         <button class="button" type="submit" formaction="c7.html">previous</button>
-        <button class="button" style="margin-left:830px;" type="submit" formaction="c9.html">next</button>
+        <button id="some-button" class="button" style="margin-left:830px;" type="submit" formaction="c9.html">next</button>
     </form>
+
+    <script>
+        document.getElementById("some-button").style.display = "none";
+    
+        function showStuff() {
+            document.getElementById("some-button").style.display = "inline";
+        }
+    
+        function myFunction() {
+            window.location = "project.html"
+        }
+    
+        setTimeout(showStuff, 5000);
+    </script>
+    
+
+
+
     <br><br> 
 </body>
 </html>
