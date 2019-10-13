@@ -89,17 +89,15 @@
         
         <!-- CKEDITOR-->
         <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
-        <script> CKEDITOR.plugins.addExternal( 'wordcount', '/attack/emaileditor/CKEditor-WordCount-Plugin-master/wordcount/', 'plugin.js' );
+        <script> CKEDITOR.plugins.addExternal( 'wordcount', '/attack/emaileditor/CKEditor-WordCount-Plugin-master/wordcount/','plugin.js');
         </script>
         
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/attack/emaileditor/style.css"> 
       </head>
       
       <body leftmargin = "0" rightmargin = "0">
       
-              <!-- head-->
-              <!-- <font face='Georgia' color=#000000><h1>BMOC email study</h1></font>-->
-              <form id="contactForm">
+<form id="contactForm">
             
           <!-- Participant name-->
               <p style="float: left; padding-right: 200px;">
@@ -197,7 +195,7 @@
                     <span class="tooltiptext">Length of the body should be more than 50 words</span></a>
                         
                     <br></label></font>
-                  <textarea type="text/javascript" name="editor" id="editor" rows="20", cols="24" class = "editor" required></textarea>
+                  <textarea type="text/javascript" name="editor" id="editor" rows="20", cols="29" class = "editor" required></textarea>
                   <script>CKEDITOR.replace( 'editor', {extraPlugins: 'wordcount'} );</script>   
               </p> 
       
@@ -209,7 +207,7 @@
                 <span class="tooltiptext">Copy one sentence from the email that best reflects its credibility</span></a>          
                 
                 <br></label></font>
-              <input type="text" name="critical" id="critical" row = "3" size="90" required></input>
+              <input type="text" name="critical" id="critical" row = "3" size="110" required></input>
             </p>
       
           <!--send button-->    
