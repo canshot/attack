@@ -4,69 +4,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <head><title>BMOC study</title></head>
-<style>
-    * {
-      box-sizing: border-box;
-    }
+<body>
 
-    * {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    /* Create two equal columns that floats next to each other */
-
-    .column1 {
-      margin: auto;
-      width: 50%;
-      padding: 5px;
-      padding-left: 30px;
-      height: auto; 
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    .content {
-          max-width: 960px;
+    <style>
+        .content {
+          max-width: 980px;
           margin: auto;
-          padding-top: 0px;
-    }
-    .button {
+          padding-top: 10px;
+        }
+        .button {
           background-color: #4CAF50; 
           color: rgb(255, 255, 255);
-          margin-left :0px; 
-    }
-    iframe:focus { 
-           outline: none; 
-    }
-    iframe[seamless] { 
-            display: block;
-    }
-  
-  </style>
-  </head>
+          margin-bottom :30px;
+        }
+    </style>
+<br>
+    <div class="content">
 
-    <body>
+<iframe style="float:middle" src="http://belkcollege.az1.qualtrics.com/jfe/form/SV_8bISHeFmZZSos8R" 
+width="950" height="1750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-      <div class="row">
-      <div class="column1" style="background-color:rgb(255, 255, 255);">
-
-      <h1><strong>Compose an email</strong></h1>
-      <em>*You can see the field description by hovering the question mark.</em>
-
-      <iframe style="border:none;" height=950px; width=850px; src="/attack/emaileditor"></iframe>
-      <br>
-
-      </div>
-    </body>
-    <form class = "content">
-        <button class="button" style="margin-left:820px;" type="submit" formaction="c13.html">next</button>
+    <form>
+    <button class="button" type="submit" formaction="c12.html">previous</button>
+    
+    <button id="some-button" class="button" style="margin-left:820px;" type="submit" formaction="end.html">next</button>
     </form>
+    
+    <script>
+        document.getElementById("some-button").style.display = "none";
+    
+        function showStuff() {
+            document.getElementById("some-button").style.display = "inline";
+        }
+        
+        setTimeout(showStuff, 5000);
+    </script>
 
+  </div>
+      
 
+</body>
 </html>
 
 
