@@ -91,12 +91,10 @@
       <div class="row">
       <div class="column1" style="background-color:rgb(255, 255, 255);">
 
-      <h1><b>Compose an email</b></h1>
-      <em>*You can see the field description by hovering the question mark.</em>
+      <h1><b>Compose an email</b><h1>
+      <h4>*You can see the field description by hovering the question mark.</h4>
 
-
-<form id="contactForm">
-            
+           
           <!-- Participant name-->
               <p style="float: left; padding-right: 200px;">
                   <font face='Arial'><label>Your full name 
@@ -207,6 +205,8 @@
             </p>
       
           <!--send button-->    
+          <button style="font-size: 18px; height:30px; width:70px" onclick="myFunction();myFunction2();">Send</button>
+
               <script>
                 function myFunction() {
                   var txt;
@@ -221,15 +221,16 @@
       
               <script>
                 function myFunction2(){
-                  var btn = '<button class="button" style="margin-left:920px;">next</button>';
+                  var btn = '<button class="button" formaction="c5.html" style="margin-left:920px;" type="submit">next</button>';
                   document.getElementById("demo2").innerHTML = btn;
-                  document.getElementById("demo2").href = "attack/t1/combination/c5.html";
                 }
               </script>
       
-              <button style="font-size: 18px; height:30px; width:70px" onclick="myFunction();myFunction2();">Send</button>
+
               <p id="demo"></p><br>
-              <p id="demo2"><a href="c5.html"></a></p>
+              <form id="demo2"></form>
+
+
          
   
   </div>
