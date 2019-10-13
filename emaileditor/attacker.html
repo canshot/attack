@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="utf-8">
+  <title>BMOC</title>
+  
+  <!-- CKEDITOR-->
+  <script src="https://cdn.ckeditor.com/4.11.2/full/ckeditor.js"></script>
+  <script> CKEDITOR.plugins.addExternal( 'wordcount', '/email/CKEditor-WordCount-Plugin-master/wordcount/', 'plugin.js' );
+  </script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body leftmargin = "500" rightmargin = "200">
+
+        <!-- head-->
+        <font face='Georgia' color=#000000><h1>BMOC email task</h1></font>
+        <form id="contactForm">
+      
+        <!-- Participant name-->
+        <p>
+            <font face='Arial'><label>*Enter your first and last name<br></label></font>
+            <input type="text" name="eid" id="eid" required>
+          </p>
+          
+        <!-- Attaker email-->
+        <p>
+          <font face='Arial'><label>*Attacker's email address (i.e. assuming you are a phishing email attacker)<br></label></font>
+          <input type="text" name="semail" id="semail" required>
+        </p>
+        
+        <!-- Receiver email-->
+        <p>
+          <font face='Arial'><label>*Receiver's email address<br></label></font>
+          <input type="text" name="remail" id="remail" required>
+        </p>
+
+        <!-- Email time-->
+        <p>
+          <font face='Arial'><label>*Desired email send time (i.e. 9:13 am or 11:42 pm)<br></label></font>
+          <input type="text" name="time" id="time" required>
+        </p>
+
+        <!-- Time and date-->
+        <p>
+          <font face='Arial'><label>*Desired email send date (i.e. Monday or Saturday)<br></label></font>
+          <input type="text" name="date" id="date" required>
+        </p>
+          
+          
+        <!-- Email subject-->
+        <p class="full">
+          <font face='Arial'><label>*Email subject<br></label></font>
+          <input type="text" name="title" id="title" size="70" required></input>
+        </p>
+        
+        <!-- Email body-->
+        <p>
+            <font face='Arial'><label>*Email body<br></label></font>
+            <textarea type="text/javascript" name="editor" id="editor" rows="20", cols = "65" class = "editor" required></textarea>
+            <script>CKEDITOR.replace( 'editor', {extraPlugins: 'wordcount'} );</script>   
+        </p> 
+        
+        <!--button-->    
+        <script>
+          function myFunction() {
+            var txt;
+            if (confirm("Do you want to send an email?")) {
+              saveMessage, txt = "<font face = 'Georgia' color = red>To ensure the data saving, please click the Send button one more time.<br>Do not refresh the page without researcher's instruction. Thank you.</font>";
+            } else {
+              txt = "You email has not been sent. Please call the experimenter.";
+            }
+            document.getElementById("demo").innerHTML = txt;
+          }
+      </script>
+        <button style="font-size: 18px; height:30px; width:70px" onclick="myFunction();">Send</button>
+          <p id="demo"></p>
+ 
+        <!--<p class="full">
+        <button type="submit">Send</button>
+        </p>-->
+     <!-- <div class="alert">Your email has been sent.<br>Do not fresh the page until researcher's instruction.</div> -->
+    
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="main.js"></script>
+  
+      
+
+</body>
+</html>
+

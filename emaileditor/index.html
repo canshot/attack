@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2;
+}
+
+.tooltip .tooltiptext {
+    top: -5px;
+    left: 105%;
+  }
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <title>Email editor</title>
+  
+  <!-- CKEDITOR-->
+  <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
+  <script> CKEDITOR.plugins.addExternal( 'wordcount', '/emaileditor/CKEditor-WordCount-Plugin-master/wordcount/', 'plugin.js' );
+  </script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body leftmargin = "0" rightmargin = "0">
+
+        <!-- head-->
+        <!-- <font face='Georgia' color=#000000><h1>BMOC email study</h1></font>-->
+        <form id="contactForm">
+      
+    <!-- Participant name-->
+        <p style="float: left; padding-right: 200px;">
+            <font face='Arial'><label>Your full name 
+             
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">Your full name</span> 
+            </a>
+
+
+
+            </label></font><br>
+            <input type="text" name="eid" id="eid" required>
+       </p> 
+
+    <!-- Authentic or Phishing-->
+        <p style="float: left;">
+            <font face='Arial'><label>Email type
+                
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">phishing</span> 
+            </a>
+                
+            </label></font><br>
+            <input type="text" name="whether" id="whether" required>
+            </p>
+
+            <br><br><br><br><br>
+       
+    <!-- Attaker email-->
+        <p style="float: left;padding-right: 200px;">
+          <font face='Arial'><label>Your email address
+
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">Your email address but not allowed to use UNCC account</span> 
+            </a>         
+            
+            <br></label></font>
+          <input type="text" name="semail" id="semail" required>
+        </p>
+        
+    <!-- Receiver email-->
+        <p style="float: left;">
+          <font face='Arial'><label>Receiver's email address
+            
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">Receiver’s email address provided by the researcher</span> 
+            </a>          
+            
+            <br></label></font>
+          <input type="text" name="remail" id="remail" required>
+        </p>
+        <br><br><br><br><br>
+    
+    <!-- Email time-->
+        <p style="float: left;">
+          <font face='Arial'><label>Desired email sent time (i.e. 9:13 am or 11:42 pm)
+            
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">Desired time when you expect to send this email</span> 
+            </a>   
+            
+            <br></label></font>
+          <input type="text" name="time" id="time" required>
+        </p>
+        <br><br><br><br>
+    
+    <!-- Email date-->
+        <p style="clear: both">
+          <font face='Arial'><label>Desired email sent day (i.e. Monday or Saturday)
+            
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">Desired day of the week when you expect to send this email</span></a>
+           
+            <br></label></font>
+          <input type="text" name="date" id="date" required><br><br>
+        </p>          
+        
+    <!-- Email subject-->
+        <p style="clear: both" class="full">
+          <font face='Arial'><label>Email subject
+            
+            <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+            <span class="tooltiptext">Email subject line</span></a>
+           
+            <br></label></font>
+          <input type="text" name="title" id="title" size="110" required></input><br><br>
+        </p>
+        
+    <!-- Email body-->
+        <p>
+            <font face='Arial'><label>Email body
+              
+              <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+              <span class="tooltiptext">Length of the body should be more than 50 words</span></a>
+                  
+              <br></label></font>
+            <textarea type="text/javascript" name="editor" id="editor" rows="20", cols="28" class = "editor" required></textarea>
+            <script>CKEDITOR.replace( 'editor', {extraPlugins: 'wordcount'} );</script>   
+        </p> 
+
+    <!-- Critial sentence-->
+       <p style="clear: both" class="full">
+        <font face='Arial'><label>Key sentence
+          
+          <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
+          <span class="tooltiptext">Copy one sentence from the email that best reflects its fakeness</span></a>          
+          
+          <br></label></font>
+        <input type="text" name="critical" id="critical" row = "3" size="90" required></input>
+      </p>
+
+    <!--button-->    
+        <script>
+          function myFunction() {
+            var txt;
+            if (confirm("Are you ready to submit the email?")) {
+              saveMessage, txt = "<font face = 'Georgia' color = red>To ensure the data saving, please click the Send button one more time.<br>Do not refresh the page without researcher's instruction. Thank you.</font>";
+            } else {
+              txt = "You email has not been sent.";
+            }
+            document.getElementById("demo").innerHTML = txt;
+          }
+      </script>
+        <button style="font-size: 18px; height:30px; width:70px" onclick="myFunction();">Send</button>
+          <p id="demo"></p>
+ 
+        <!--<p class="full">
+        <button type="submit">Send</button>
+        </p>-->
+     <!-- <div class="alert">Your email has been sent.<br>Do not fresh the page until researcher's instruction.</div> -->
+    
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="main.js"></script>
+  
+</body>
+</html>

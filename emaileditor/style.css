@@ -1,0 +1,35 @@
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Email head */
+.email-head {
+  position: absolute;
+  top: 12%;
+  left: 15.5%;
+  color: #000000;
+  font-family: "century gothic";
+  font-size: 1.495em;
+  font-weight: bold;
+}
+
+/* Email name */
+.email-name {
+  position: absolute;
+  top: 18%;
+  left: 15.5%;
+  font-family: "Arial";
+  font-size: 0.85em;
+  color: #6A6868;
+}
+
+/* Email body */
+.email-body {
+  position: absolute;
+  top: 25%;
+  left: 16%;
+  font-family: "Arial";
+  font-size: 1.025em;
+  color: gray;
+}
