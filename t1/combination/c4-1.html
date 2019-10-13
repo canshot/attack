@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<head><title>BMOC study</title></head>
+<title>BMOC study</title>
+
 <style>
     * {
       box-sizing: border-box;
@@ -38,6 +38,7 @@
           background-color: #4CAF50; 
           color: rgb(255, 255, 255);
           margin-left :0px; 
+          font-size: 18px;
     }
     iframe:focus { 
            outline: none; 
@@ -73,7 +74,17 @@
       visibility: visible;
     }
   </style>
-  </head>
+
+<head>  
+        <meta charset="utf-8">
+        
+        <!-- CKEDITOR-->
+        <script src="https://cdn.ckeditor.com/4.13.0/standard-all/ckeditor.js"></script>
+        <script>CKEDITOR.plugins.addExternal( 'wordcount', '/attack/emaileditor/CKEditor-WordCount-Plugin-master/wordcount/','plugin.js');
+        </script>
+        
+        <link rel="stylesheet" href="/attack/emaileditor/style.css"> 
+</head>
 
     <body>
 
@@ -82,21 +93,8 @@
 
       <h1><b>Compose an email</b></h1>
       <em>*You can see the field description by hovering the question mark.</em>
-      
-      <head>
-        <meta charset="utf-8">
-        <title>Email editor</title>
-        
-        <!-- CKEDITOR-->
-        <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
-        <script> CKEDITOR.plugins.addExternal( 'wordcount', '/attack/emaileditor/CKEditor-WordCount-Plugin-master/wordcount/','plugin.js');
-        </script>
-        
-        <link rel="stylesheet" href="/attack/emaileditor/style.css"> 
-      </head>
-      
-      <body leftmargin = "0" rightmargin = "0">
-      
+
+
 <form id="contactForm">
             
           <!-- Participant name-->
@@ -106,10 +104,8 @@
                   <a class="tooltip"><img src="https://img.icons8.com/material-outlined/17/000000/help.png">
                   <span class="tooltiptext">Your full name</span> 
                   </a>
-      
-      
-      
-                  </label></font><br>
+
+                </label></font><br>
                   <input type="text" name="eid" id="eid" required>
              </p> 
       
@@ -195,7 +191,7 @@
                     <span class="tooltiptext">Length of the body should be more than 50 words</span></a>
                         
                     <br></label></font>
-                  <textarea type="text/javascript" name="editor" id="editor" rows="20", cols="29" class = "editor" required></textarea>
+                  <textarea name="editor" id="editor" rows="20" cols="29" class = "editor" required></textarea>
                   <script>CKEDITOR.replace( 'editor', {extraPlugins: 'wordcount'} );</script>   
               </p> 
       
@@ -225,15 +221,15 @@
       
               <script>
                 function myFunction2(){
-                  var btn = '<button class="button" style="margin-left:920px;" type="submit">next</button>';
+                  var btn = '<button class="button" style="margin-left:920px;">next</button>';
                   document.getElementById("demo2").innerHTML = btn;
-                  document.getElementById("demo2").href = "c5.html";
+                  document.getElementById("demo2").href = "attack/t1/combination/c5.html";
                 }
               </script>
       
               <button style="font-size: 18px; height:30px; width:70px" onclick="myFunction();myFunction2();">Send</button>
               <p id="demo"></p><br>
-              <p id="demo2"></p>
+              <p id="demo2"><a href="c5.html"></a></p>
          
   
   </div>
