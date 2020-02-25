@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<head><title>BMOC study</title></head>
+<body>
+
+    <style>
+        .content {
+          max-width: 980px;
+          margin: auto;
+          padding-top: 10px;
+        }
+        .button {
+          background-color: #4CAF50; 
+          color: rgb(255, 255, 255);
+          margin-bottom :30px;
+        }
+    </style>
+<br>
+    <div class="content">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZeO0or7Grr1_uUBCB02It2XVHOs8Wfhdga5fxpTyQT2e_7w/viewform?embedded=true" width="950" height="1050" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <form>    
+    <button id="some-button" class="button" style="margin-left:900px;" type="submit" formaction="end.html">next</button>
+    </form>
+    
+    <script>
+        document.getElementById("some-button").style.display = "none";
+    
+        function showStuff() {
+            document.getElementById("some-button").style.display = "inline";
+        }
+        
+        setTimeout(showStuff, 5000);
+    </script>
+
+  </div>
+      
+
+</body>
+</html>
+
+
+
